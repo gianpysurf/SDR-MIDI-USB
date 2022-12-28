@@ -1,0 +1,35 @@
+Questo progetto è stato preso da internet (https://iu8nqi.wixsite.com/blog/post/usb-midi-controller-for-sdr-console)
+e poi ho fatto alcune modifiche.
+Con questo controller si può controllare le principali funzioni di SDR Console (il software per gestire le ormai famose chiavette USB per ricevere frequenze Ham, broadcast, ecc.… con tecnologia SDR).
+Con questo controller sarà possibile:
+
+•	Utilizzare un Encoder rotativo (con annesso pulsante incorporato) per spostarsi in frequenza in modalità "ultra fine" e "fine", cioè a piccoli step
+
+•	Utilizzare un Encoder rotativo (con annesso pulsante incorporato) per spostarsi in frequenza in modalità "normale" e "large", ovvero, a step più larghi
+
+•	Utilizzare un Encoder rotativo (con annesso pulsante incorporato) per spostarsi in frequenza di 1 MHz
+
+•	Utilizzare un Encoder rotativo (con annesso pulsante incorporato) per regolare il filtro della banda 
+
+•	Utilizzare un Encoder rotativo per spostarsi nelle varie modalità FM SSB CW AM ecc
+
+•	Utilizzare 1 potenziometro per il controllo del Volume
+
+Ovviamente l'assegnazione delle funzioni andrà fatta in SDR Console a lavoro terminato, associando ad ogni elemento la caratteristica desiderata. Il file SDR-MidiDefns_Arduino Leonardo.xml deve essere copiato nella cartella documenti e poi caricarlo dalla finestra: 
+Tools/Options/MIDI/Load File.
+Usando un Arduino Leonardo, non c'è bisogno di scrivere il bootloader, 
+mentre se si usa Arduino Uno si (fare riferimento al sito).
+Nel progetto originale, il costruttore usa tre potenziometri, uno per il volume, gli altri due per il filtro 
+ed usa 5 pulsanti per le modalità mode +- , Tune 1MHz +- ed uno per il mute. 
+Io ho eliminato due potenziometri del filtro ed i 5 pulsanti. Al loro posto ho usato tutti encoder rotativi con switch.
+Ho eliminato il pulsante Mute.
+Per fare il cambio da X10 a X100 si usa lo switch dell'encoder.
+Per fare il cambio da Fine a Norm si usa lo switch dell'encoder.
+Per fare il cambio da Filter Hight a Filter Low si usa lo switch dell'encoder.
+Nella cartella ci sono le due librerie da usare, oltre allo schema un'immagine della realizzazione.
+
+Spero possa piacervi.
+
+IZ6222SWL
+
+
